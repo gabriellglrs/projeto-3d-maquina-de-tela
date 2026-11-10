@@ -1,0 +1,8 @@
+[
+ {"id":"solid.cylinder","params":{"radius":30,"height":620,"body_name":"tubo"}},
+ {"id":"solid.cylinder","params":{"radius":25,"height":620,"operation":"cut","targets":["tubo"]}},
+ {"id":"solid.coil","params":{"diameter":55,"turns":1,"pitch":80,"section_size":6,"section":"square","section_position":"center","base":[0,0,50],"operation":"cut","targets":["tubo"],"name":"fenda"}},
+ {"id":"solid.pattern.rectangular","params":{"features":["fenda"],"dir1":[0,0,1],"count1":7,"spacing1":80}},
+ {"id":"file.export_step","params":{"path":"C:/DEV/3dprint/solidcraft_test/cabecote_pat.step"}},
+ {"id":"file.export_stl","params":{"path":"C:/DEV/3dprint/solidcraft_test/cabecote_pat.stl","quality":"fine"}}
+]

@@ -1,0 +1,25 @@
+[
+ {"id":"solid.box","params":{"length":152,"width":60,"height":55,"corner":[-76,0,0],"body_name":"mancal_1a_inf"}},
+ {"id":"solid.box","params":{"length":152,"width":60,"height":55,"corner":[-76,0,55],"body_name":"mancal_1a_sup"}},
+ {"id":"solid.box","params":{"length":152,"width":80,"height":55,"corner":[-76,60,0],"body_name":"mancal_1b_inf"}},
+ {"id":"solid.box","params":{"length":152,"width":80,"height":55,"corner":[-76,60,55],"body_name":"mancal_1b_sup"}},
+
+ {"id":"solid.cylinder","params":{"radius":12.5,"height":80,"base":[0,-10,55],"axis":"Y","operation":"cut","targets":["mancal_1a_inf","mancal_1a_sup"],"name":"furo_eixo_1a"}},
+ {"id":"solid.cylinder","params":{"radius":28.5,"height":100,"base":[0,50,55],"axis":"Y","operation":"cut","targets":["mancal_1b_inf","mancal_1b_sup"],"name":"furo_tubo_1b"}},
+
+ {"id":"solid.hole","params":{"position":[-50,30,110],"direction":[0,0,-1],"diameter":6.4,"targets":["mancal_1a_sup","mancal_1a_inf"],"name":"parafuso_1a_esq"}},
+ {"id":"solid.hole","params":{"position":[50,30,110],"direction":[0,0,-1],"diameter":6.4,"targets":["mancal_1a_sup","mancal_1a_inf"],"name":"parafuso_1a_dir"}},
+
+ {"id":"solid.hole","params":{"position":[-50,100,110],"direction":[0,0,-1],"diameter":6.4,"targets":["mancal_1b_sup","mancal_1b_inf"],"name":"parafuso_1b_esq"}},
+ {"id":"solid.hole","params":{"position":[50,100,110],"direction":[0,0,-1],"diameter":6.4,"targets":["mancal_1b_sup","mancal_1b_inf"],"name":"parafuso_1b_dir"}},
+
+ {"id":"solid.hole","params":{"position":[0,100,110],"direction":[0,0,-1],"diameter":6.4,"depth":30,"type":"counterbore","cb_diameter":13,"cb_depth":6.4,"targets":["mancal_1b_sup"],"name":"parafuso_14"}},
+
+ {"id":"solid.box","params":{"length":152,"width":30,"height":6,"corner":[-76,85,110],"body_name":"bracadeira"}},
+ {"id":"solid.hole","params":{"position":[-50,100,116],"direction":[0,0,-1],"diameter":6.4,"targets":["bracadeira"],"name":"brac_esq"}},
+ {"id":"solid.hole","params":{"position":[0,100,116],"direction":[0,0,-1],"diameter":6.4,"targets":["bracadeira"],"name":"brac_centro"}},
+ {"id":"solid.hole","params":{"position":[50,100,116],"direction":[0,0,-1],"diameter":6.4,"targets":["bracadeira"],"name":"brac_dir"}},
+
+ {"id":"file.export_step","params":{"path":"C:/DEV/3dprint/alambrado/export/mancal_cabecote.step"}},
+ {"id":"file.export_stl","params":{"path":"C:/DEV/3dprint/alambrado/export/mancal_cabecote.stl","quality":"fine"}}
+]

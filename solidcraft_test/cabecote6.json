@@ -1,0 +1,6 @@
+[
+ {"id":"solid.cylinder","params":{"radius":30,"height":620,"body_name":"tubo"}},
+ {"id":"solid.cylinder","params":{"radius":25,"height":620,"operation":"cut","targets":["tubo"]}},
+ {"id":"solid.coil","params":{"diameter":55,"turns":7.12,"pitch":80,"section_size":6,"section":"square","section_position":"center","base":[0,0,50],"operation":"cut","targets":["tubo"]}},
+ {"id":"file.export_step","params":{"path":"C:/DEV/3dprint/solidcraft_test/cabecote_6mm.step"}}
+]

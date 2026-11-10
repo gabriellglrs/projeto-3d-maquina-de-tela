@@ -1,0 +1,26 @@
+[
+ {"id":"parameters.add","params":{"name":"wire_d","expression":"3.25 mm"}},
+ {"id":"parameters.add","params":{"name":"board_t","expression":"25.4 mm"}},
+ {"id":"parameters.add","params":{"name":"clr","expression":"0.8 mm"}},
+ {"id":"parameters.add","params":{"name":"leg_in","expression":"30 mm"}},
+ {"id":"parameters.add","params":{"name":"drop","expression":"55 mm"}},
+ {"id":"parameters.add","params":{"name":"u_r","expression":"5.5 mm"}},
+ {"id":"parameters.add","params":{"name":"tip","expression":"12 mm"}},
+
+ {"id":"sketch.create","params":{"plane":"YZ","name":"Path"}},
+ {"id":"sketch.line","params":{"points":[["-(wire_d/2 + clr)","-leg_in"],["-(wire_d/2 + clr)","0"]]}},
+ {"id":"sketch.arc.center_point","params":{"center":["board_t/2","0"],"start":"l1.end","end":["board_t + wire_d/2 + clr","0"],"clockwise":true}},
+ {"id":"sketch.line","params":{"points":["a1.end",["board_t + wire_d/2 + clr","-drop"]]}},
+ {"id":"sketch.arc.center_point","params":{"center":["board_t + wire_d/2 + clr - u_r","-drop"],"start":"l2.end","end":["board_t + wire_d/2 + clr - 2*u_r","-drop"],"clockwise":true}},
+ {"id":"sketch.line","params":{"points":["a2.end",["board_t + wire_d/2 + clr - 2*u_r","-drop + tip"]]}},
+ {"id":"sketch.finish","params":{}},
+
+ {"id":"sketch.create","params":{"plane":"XY","offset":"-leg_in","name":"Profile"}},
+ {"id":"sketch.circle.center","params":{"center":[0,"-(wire_d/2 + clr)"],"diameter":"wire_d"}},
+ {"id":"sketch.finish","params":{}},
+
+ {"id":"solid.sweep","params":{"sketch":"Profile","path_sketch":"Path","path":["l1","a1","l2","a2","l3"],"name":"Gancho","body_name":"Gancho"}},
+
+ {"id":"file.export_step","params":{"path":"C:/DEV/3dprint/alambrado/export/gancho_tela.step"}},
+ {"id":"file.export_stl","params":{"path":"C:/DEV/3dprint/alambrado/export/gancho_tela.stl","quality":"fine"}}
+]

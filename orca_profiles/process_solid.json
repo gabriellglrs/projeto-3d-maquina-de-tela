@@ -1,0 +1,26 @@
+{
+	"type": "process",
+	"name": "0.20mm Solido (100%) @MyMarlin",
+	"inherits": "0.20mm Standard @MyMarlin",
+	"from": "user",
+	"instantiation": "true",
+	"layer_height": "0.2",
+	"initial_layer_print_height": "0.2",
+	"layer_change_gcode": "G92 E0",
+	"curr_bed_type": "Textured PEI Plate",
+	"wall_loops": "3",
+	"top_shell_layers": "4",
+	"bottom_shell_layers": "4",
+	"top_shell_thickness": "0",
+	"bottom_shell_thickness": "0",
+	"sparse_infill_density": "100%",
+	"sparse_infill_pattern": "grid",
+	"infill_combination": "0",
+	"brim_width": "0",
+	"support_material": "0",
+	"enable_support": "0",
+	"seam_position": "aligned",
+	"compatible_printers": [
+		"MyMarlin 0.4 nozzle"
+	]
+}

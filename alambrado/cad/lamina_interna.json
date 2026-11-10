@@ -1,0 +1,10 @@
+[
+ {"id":"solid.box","params":{"length":744,"width":50,"height":5,"corner":[0,0,0],"body_name":"lamina"}},
+
+ {"id":"solid.fillet","params":{"radius":5,"edges":[[0,0,2.5],[744,0,2.5],[0,50,2.5],[744,50,2.5]],"body":"lamina"}},
+
+ {"id":"solid.hole","params":{"position":[10,25,5],"direction":[0,0,-1],"diameter":6.4,"targets":["lamina"],"name":"furo_manivela"}},
+
+ {"id":"file.export_step","params":{"path":"C:/DEV/3dprint/alambrado/export/lamina_interna.step"}},
+ {"id":"file.export_stl","params":{"path":"C:/DEV/3dprint/alambrado/export/lamina_interna.stl","quality":"fine"}}
+]

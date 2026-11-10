@@ -1,0 +1,1 @@
+[{"id":"solid.cylinder","params":{"radius":20,"height":10,"body_name":"disco"}},{"id":"solid.cylinder","params":{"radius":8,"height":30,"body_name":"furo","operation":"cut","targets":["disco"]}}]
