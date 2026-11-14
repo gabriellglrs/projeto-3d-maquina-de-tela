@@ -303,3 +303,35 @@ O addon do FreeCAD expõe `execute_code`, que roda Python arbitrário com as
 permissões do teu usuário. Por padrão escuta só em `localhost` e recusa
 requisições de navegador. **Não** habilite *Remote Connections* sem
 `--auth-token` e sem restringir *Allowed IPs*.
+
+
+---
+
+## Ambiente atual (migrado em 2026-11-14)
+
+Repositório clonado na **máquina nova** (Windows 11 Pro, instalação limpa) em
+`C:\DEV\projeto-3d-maquina-de-tela`. Histórico Git preservado (2 commits, `main`
+sincronizada com `origin`).
+
+> As referências a `C:\DEV\3dprint\`, `C:\DEV\tools\` e `%LOCALAPPDATA%\Programs\FreeCAD 1.1`
+> acima descrevem a **máquina anterior**. Nesta máquina a raiz é `C:\DEV\` e este
+> repositório é a pasta do projeto.
+
+### Estado das dependências nesta máquina
+
+| Ferramenta | Status | Ação quando precisar |
+|---|---|---|
+| SolidCraft 0.41 | ✅ instalado (`C:\Program Files\SolidCraft`) | usar direto (`solidcraft-cli`) |
+| Python 3.15.2 + uv | ✅ instalado | isolar deps por projeto com `uv venv --python 3.12` |
+| OrcaSlicer | ❌ não instalado | `winget install SoftFever.OrcaSlicer` + copiar `orca_profiles\` para caminho **sem espaços** |
+| CadQuery | ❌ não instalado | `uv pip install cadquery` (venv Python 3.12) |
+| FreeCAD | ❌ não instalado | instalar só se o fluxo `.FCStd` for usado |
+| OpenSCAD | ❌ não instalado | `winget install OpenSCAD.OpenSCAD` |
+| matplotlib / Pillow | ❌ não instalados | `uv pip install matplotlib pillow` (validação de G-code e imagens) |
+
+### Comandos de validação que continuam valendo
+
+`python check_stl.py peca.stl` · `python gcode_stats.py export\peca.gcode` ·
+`python bridge_audit.py export\peca.gcode` · `& "C:\Program Files\SolidCraft\solidcraft-cli.exe" eval design.json`
+
+Documentação completa do ambiente do desenvolvedor: `C:\DEV\_ENVIRONMENT\`.
